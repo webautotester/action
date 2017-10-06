@@ -12,7 +12,7 @@ export function createAction(actionJSON) {
 	case 'GotoAction':
 		return new GotoAction(actionJSON.url);
 	case 'ClickAction':
-		return new ClickAction(actionJSON.selector);
+		return new ClickAction(actionJSON.selector, actionJSON.href);
 	case 'MouseOverAction':
 		return new MouseOverAction(actionJSON.selector);
 	case 'TypeAction':
